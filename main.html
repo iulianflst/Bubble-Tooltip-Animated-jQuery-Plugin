@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bubble Popuper</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script src="FlstBubble-min.js"></script>
+<link rel="stylesheet" href="css/blue-theme.css" type="text/css">
+<style type="text/css">
+
+<!--
+  body {text-align: center;}
+  .wrapper {text-align:right; width: 800px;margin:0 auto;text-align: center;}
+  .wrapper ul li  {
+    float: left;
+    width: 150px;
+    height: 150px;
+  
+    border: 1px solid #ccc;
+    margin:10px;
+    list-style-type: none;
+    
+  }
+  .flstbubble ul {
+                overflow:hidden;
+  }
+//-->
+</style>
+</head>
+<body>
+<div class="wrapper">
+      <ul class="flstbubble">
+           <li title="Click the bubble to hide" class="s0"> Item Nr 1</li>
+           <li title="Item nr 2 custom text"> Item Nr 2</li>
+           <li title="Just another tooltip" > Item Nr 4</li>
+           <li title="this is a &lt;b&gt;jQuery Plugin &lt;/b&gt;" class="s1"> Item Nr 3</li>
+           <li title="very easy to implement"> Item Nr 5</li>
+           <li title="available on codecanyon.net"> Item Nr 6</li>
+           <li title="Add Custom function "> Item Nr 7</li>
+           <li title="Set the animation duration"> Item Nr 8</li>
+           <li title="Very easy to customize the color" class="s2"> Item Nr 9</li>
+           <li title="Multiple instance of this jQuery plugin "> Item Nr 10</li>
+           <li title="You can show and the wizard and let the user mouseover"> Item Nr 11</li>
+           <li title="If you need more customization just edit the css file"> Item Nr 12</li>
+           <li title="You can add a custom function for when the wizard has finished" class="s3"> Item Nr 7</li>
+           <li title="If javascript is not enabled it will show the default title" > Item Nr 8</li>
+           <li title="Fast Support "> Item Nr 9</li>
+           <li title="After this wizzard has stoped the blue bubble will show up when you mouseover a tag"  class="s4" > Item Nr 10</li>
+           <li title="Lorem ipsum"> Item Nr 11</li>
+           <li title="Lorem ipsum"> Item Nr 12</li>
+           <li title="Lorem ipsum"> Item Nr 7</li>
+           <li title="Lorem ipsum"> Item Nr 8</li>
+           <li title="Lorem ipsum"> Item Nr 9</li>
+           <li title="Lorem ipsum"> Item Nr 10</li>
+           <li title="Lorem ipsum"> Item Nr 11</li>
+           <li title="Lorem ipsum"> Item Nr 12</li>                      
+      </ul>
+      <br clear="all">
+
+</div>
+ <script>
+ $(document).ready(function(){
+   function startBlue(){
+    $('.flstbubble li, .flstbubble2').flstBubble({id:'newId',duration:100});                                  
+   }
+                                        
+                                                                                                          
+
+ $('.flstbubble').flstBubble({
+                          
+                                  wizard: new Array('.s0','.s1','.s3','.s4'),
+                                  showOnlyOnWizard: true ,
+                                   autoscroll:true,
+                                   startWizardFrom:0,
+                                   theme: { background:'red',color:'#fff' },
+                                   onFinishWizard:startBlue
+                                  }); 
+});                                     
+                                                                
+ </script>
+
+</body>
+</html> 
