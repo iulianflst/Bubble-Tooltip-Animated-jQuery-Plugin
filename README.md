@@ -106,7 +106,7 @@ When you click the bubble button you will be able to set:
 In the wizard bubble mode the user will navigate from bubble to bubble(check out the video)
 Additional Help
 
-For any questions don&#x27;t hesitate to contact me http://graphicriver.net/user/iulianf
+For any questions don&#x27;t hesitate to contact me https://flester.ro/contact
 
 <h3>License</h3>
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
