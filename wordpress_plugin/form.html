@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+</head>
+<body>
+<form  onsubmit=" return aflstbbl_add2Page();" >
+<div>
+  <table>
+  <tr>
+    <td>Priority</td>
+    <td><input type="text" name="flstbbl_priority" id="flstbbl_priority" value="0" /></td>
+  </tr>
+    <tr>
+        <td>Display Type:</td><td><select name="flstbbl_type" id="flstbbl_type"> 
+            <option value="p">Paragraph</option>
+            <option value="div">Block</option>
+            <option value="span">inline</option>
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            
+            </select></td>
+    </tr>
+    <tr>
+        
+        <td>Type: </td>
+        <td><select name="flstbbl_type2" id="flstbbl_type2">
+            <option value="single"> Mouse over Tag</option>
+            <option value="wizard">Wizard bubble</option>
+            </select>
+        </td>
+        
+    </tr>
+  </table>
+  <div>
+    Content :     <br />
+    <textarea rows="5" cols="50" name="flstbbl_content" id="flstbbl_content"></textarea>
+  </div>
+
+  <div>
+    Bubble content :     <br />
+    <textarea rows="5" cols="50" name="flstbbl_title" id="flstbbl_title"></textarea>
+  </div> 
+  <div><input type="submit" name="add" value="add" /></div> 
+  <script>
+ 
+
+   function aflstbbl_add2Page(){
+    var txt = "[bubble type='";
+        txt += ($('#flstbbl_type2').val()?$('#flstbbl_type2').val():'span')+"' priority='";
+        txt += ($('#flstbbl_priority').val()?$('#flstbbl_priority').val():'0')+ "'  tag='";
+        txt += ($('#flstbbl_type').val()?$('#flstbbl_type').val():'span')+ "'  title=\"";
+        txt +=  ($('#flstbbl_title').val()?$('#flstbbl_title').val():'span')+  "\" content = \""+($('#flstbbl_content').val()?$('#flstbbl_content').val():'')+"\"]";
+      var w = parent.window;
+    if(w.tinyMCE) {
+    
+    	w.tinyMCE.execInstanceCommand(w.tinyMCE.activeEditor.id, 'mceInsertContent', false, txt);
+      //Peforms a clean up of the current editor HTML.
+    	//tinyMCEPopup.editor.execCommand('mceCleanup');
+    //Repaints the editor. Sometimes the browser has graphic glitches.
+ 
+    	parent.tinyMCE.activeEditor.windowManager.close(window);
+	} 
+  return false;
+   }
+    
+  </script>
+</div>  
+</form>
+</body>
+</html>
